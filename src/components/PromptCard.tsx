@@ -138,7 +138,7 @@ const PromptCard = ({ prompt }: PromptCardProps) => {
             className="h-8"
           >
             <Copy className="w-3 h-3 mr-1" />
-            {copied ? 'Copied!' : 'Copy'}
+            {copied ? 'Kopirano!' : 'Kopiraj'}
           </Button>
           <Button
             variant="ghost"

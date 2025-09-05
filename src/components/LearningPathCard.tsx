@@ -47,7 +47,7 @@ const LearningPathCard = () => {
     <div className="bg-gradient-card border border-border/50 rounded-xl p-6">
       <div className="flex items-center space-x-2 mb-4">
         <Target className="h-5 w-5 text-primary" />
-        <h3 className="font-poppins font-semibold text-lg">Your Learning Path</h3>
+        <h3 className="font-poppins font-semibold text-lg">Tvoja Staza Učenja</h3>
       </div>
 
       <div className="space-y-4">
@@ -61,7 +61,9 @@ const LearningPathCard = () => {
               {mockLearningPath.description}
             </p>
             <Badge variant="outline" className={`text-xs border ${getDifficultyColor(mockLearningPath.difficulty)}`}>
-              {mockLearningPath.difficulty}
+              {mockLearningPath.difficulty === 'Beginner' ? 'Početni' : 
+               mockLearningPath.difficulty === 'Intermediate' ? 'Srednji' : 
+               mockLearningPath.difficulty === 'Advanced' ? 'Napredni' : mockLearningPath.difficulty}
             </Badge>
           </div>
         </div>
@@ -70,7 +72,7 @@ const LearningPathCard = () => {
         <div className="space-y-2">
           <div className="flex justify-between items-center text-sm">
             <span className="text-muted-foreground font-medium">
-              Progress: {mockLearningPath.completedLessons}/{mockLearningPath.totalLessons} lessons
+              Napredak: {mockLearningPath.completedLessons}/{mockLearningPath.totalLessons} lekcija
             </span>
             <span className="font-semibold">{Math.round(progress)}%</span>
           </div>
@@ -87,7 +89,7 @@ const LearningPathCard = () => {
           <div className="flex items-center space-x-2 mb-2">
             <div className="h-2 w-2 rounded-full bg-primary animate-pulse" />
             <span className="text-xs font-medium text-primary uppercase tracking-wide">
-              Next Lesson
+              Sledeća Lekcija
             </span>
           </div>
           <h5 className="font-medium text-sm mb-1">
@@ -101,7 +103,7 @@ const LearningPathCard = () => {
 
         {/* Action Button */}
         <Button className="w-full bg-gradient-primary hover:opacity-90 shadow-glow">
-          Continue Learning
+          Nastavi Učenje
           <ArrowRight className="w-4 h-4 ml-2" />
         </Button>
 
@@ -109,11 +111,11 @@ const LearningPathCard = () => {
         <div className="flex items-center justify-between pt-2 text-xs text-muted-foreground border-t border-border/30">
           <div className="flex items-center space-x-1">
             <CheckCircle className="h-3 w-3 text-success" />
-            <span>{mockLearningPath.completedLessons} completed</span>
+            <span>{mockLearningPath.completedLessons} završeno</span>
           </div>
           <div className="flex items-center space-x-1">
             <Clock className="h-3 w-3" />
-            <span>{mockLearningPath.estimatedTime} remaining</span>
+            <span>{mockLearningPath.estimatedTime} preostalo</span>
           </div>
         </div>
       </div>

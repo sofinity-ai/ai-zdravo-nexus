@@ -28,15 +28,15 @@ const Navigation = () => {
           <nav className="hidden md:flex items-center space-x-6">
             <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
               <BookOpen className="w-4 h-4 mr-2" />
-              AI School
+              AI Škola
             </Button>
             <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
               <Library className="w-4 h-4 mr-2" />
-              Prompt Library
+              Prompt Biblioteka
             </Button>
             <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
               <Users className="w-4 h-4 mr-2" />
-              Community
+              Zajednica
             </Button>
           </nav>
         </div>
@@ -47,7 +47,7 @@ const Navigation = () => {
           <div className="relative hidden md:block">
             <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
             <Input
-              placeholder="Search courses, prompts..."
+              placeholder="Pretraži kurseve, promptove..."
               className="w-64 pl-9 bg-muted/50 border-border/50"
             />
           </div>
@@ -72,7 +72,7 @@ const Navigation = () => {
                 </Avatar>
                 <div className="text-left hidden md:block">
                   <p className="text-sm font-medium">Ana Marić</p>
-                  <p className="text-xs text-muted-foreground">Level 5</p>
+                  <p className="text-xs text-muted-foreground">Nivo 5</p>
                 </div>
               </Button>
             </DropdownMenuTrigger>

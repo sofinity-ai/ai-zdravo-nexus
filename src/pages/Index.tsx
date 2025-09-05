@@ -29,7 +29,7 @@ const Index = () => {
         <section className="animate-slide-up">
           <div className="flex items-center space-x-2 mb-6">
             <TrendingUp className="h-5 w-5 text-primary" />
-            <h2 className="font-poppins font-semibold text-2xl">Continue Learning</h2>
+            <h2 className="font-poppins font-semibold text-2xl">Nastavi sa učenjem</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -39,27 +39,12 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Learning Path & Community */}
-        <section className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <LearningPathCard />
-          <CommunityWidget />
-        </section>
-
-        {/* Course Carousels */}
-        <section className="space-y-12">
+        {/* Popular Courses */}
+        <section className="space-y-6">
           <CourseCarousel 
-            title="🔥 Popular Courses" 
+            title="Popularni Kursevi" 
             courses={popularCourses}
-          />
-          
-          <CourseCarousel 
-            title="🚀 Perfect for Beginners" 
-            courses={beginnerCourses}
-          />
-          
-          <CourseCarousel 
-            title="⚡ Advanced Techniques" 
-            courses={advancedCourses}
+            showFilters={true}
           />
         </section>
 
@@ -67,13 +52,23 @@ const Index = () => {
         <section>
           <div className="flex items-center space-x-2 mb-6">
             <Zap className="h-5 w-5 text-primary" />
-            <h2 className="font-poppins font-semibold text-2xl">Featured Prompts</h2>
+            <h2 className="font-poppins font-semibold text-2xl">Izdvojeni Promptovi</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {topPrompts.map((prompt) => (
               <PromptCard key={prompt.id} prompt={prompt} />
             ))}
+          </div>
+        </section>
+
+        {/* Learning Path & Community - Two Column Layout */}
+        <section className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+          <div className="lg:col-span-3">
+            <LearningPathCard />
+          </div>
+          <div className="lg:col-span-2">
+            <CommunityWidget />
           </div>
         </section>
 
@@ -84,18 +79,18 @@ const Index = () => {
               <Sparkles className="h-12 w-12 text-primary animate-glow-pulse" />
             </div>
             <h2 className="font-poppins font-bold text-3xl md:text-4xl">
-              Ready to <span className="gradient-text">Master AI</span>?
+              Spremni da <span className="gradient-text">ovladate AI</span>?
             </h2>
             <p className="text-lg text-muted-foreground">
-              Join thousands of professionals from the Western Balkans who are already 
-              transforming their careers with AI skills.
+              Pridružite se hiljadama stručnjaka iz Zapadnog Balkana koji već 
+              transformišu svoje karijere pomoću AI veština.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-3 bg-gradient-primary text-primary-foreground rounded-lg font-semibold hover:opacity-90 shadow-glow animate-glow-pulse">
-                Start Your Journey
+                Započni putovanje
               </button>
               <button className="px-8 py-3 border border-border bg-background/50 backdrop-blur-sm rounded-lg font-semibold hover:bg-muted/50">
-                Explore Community
+                Istraži Zajednicu
               </button>
             </div>
           </div>

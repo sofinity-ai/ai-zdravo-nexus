@@ -52,10 +52,10 @@ const CommunityWidget = () => {
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center space-x-2">
           <MessageCircle className="h-5 w-5 text-primary" />
-          <h3 className="font-poppins font-semibold text-lg">Community Buzz</h3>
+          <h3 className="font-poppins font-semibold text-lg">Aktivnosti u Zajednici</h3>
         </div>
         <Button variant="ghost" size="sm" className="text-primary hover:text-primary/80">
-          View All
+          Prikaži Sve
           <ExternalLink className="w-3 h-3 ml-1" />
         </Button>
       </div>
@@ -111,7 +111,7 @@ const CommunityWidget = () => {
       <div className="mt-6 pt-4 border-t border-border/30">
         <Button variant="outline" className="w-full">
           <MessageCircle className="w-4 h-4 mr-2" />
-          Join the Discussion
+          Priključi se Diskusiji
         </Button>
       </div>
     </div>

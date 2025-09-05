@@ -27,7 +27,7 @@ const ContinueLearningCard = ({ course }: ContinueLearningCardProps) => {
               {course.title}
             </h4>
             <p className="text-sm text-muted-foreground mb-3">
-              Next: {course.nextLesson}
+              Sledeće: {course.nextLesson}
             </p>
           </div>
           <Button
@@ -41,7 +41,7 @@ const ContinueLearningCard = ({ course }: ContinueLearningCardProps) => {
         {/* Progress */}
         <div className="space-y-2">
           <div className="flex justify-between items-center text-sm">
-            <span className="text-muted-foreground">Progress</span>
+            <span className="text-muted-foreground">Napredak</span>
             <span className="font-medium">{course.progress}%</span>
           </div>
           <Progress value={course.progress} className="h-2">
@@ -60,7 +60,7 @@ const ContinueLearningCard = ({ course }: ContinueLearningCardProps) => {
           </div>
           <Button variant="ghost" size="sm" className="text-primary hover:text-primary/80 h-8">
             <BookOpen className="w-3 h-3 mr-1" />
-            Continue
+            Nastavi
           </Button>
         </div>
       </div>

@@ -7,9 +7,10 @@ interface CourseCarouselProps {
   title: string;
   courses: Course[];
   showViewAll?: boolean;
+  showFilters?: boolean;
 }
 
-const CourseCarousel = ({ title, courses, showViewAll = true }: CourseCarouselProps) => {
+const CourseCarousel = ({ title, courses, showViewAll = true, showFilters = false }: CourseCarouselProps) => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: 'left' | 'right') => {
@@ -33,6 +34,27 @@ const CourseCarousel = ({ title, courses, showViewAll = true }: CourseCarouselPr
           </Button>
         )}
       </div>
+
+      {/* Filters */}
+      {showFilters && (
+        <div className="flex flex-wrap gap-2">
+          <button className="px-4 py-2 rounded-full bg-primary text-primary-foreground text-sm font-medium">
+            Svi
+          </button>
+          <button className="px-4 py-2 rounded-full bg-muted/50 hover:bg-muted text-foreground text-sm font-medium transition-colors">
+            Za Početnike
+          </button>
+          <button className="px-4 py-2 rounded-full bg-muted/50 hover:bg-muted text-foreground text-sm font-medium transition-colors">
+            Marketing
+          </button>
+          <button className="px-4 py-2 rounded-full bg-muted/50 hover:bg-muted text-foreground text-sm font-medium transition-colors">
+            Produktivnost
+          </button>
+          <button className="px-4 py-2 rounded-full bg-muted/50 hover:bg-muted text-foreground text-sm font-medium transition-colors">
+            Napredni
+          </button>
+        </div>
+      )}
 
       {/* Carousel */}
       <div className="relative group">

@@ -78,7 +78,9 @@ const CourseCard = ({ course, size = 'default' }: CourseCardProps) => {
             <p className="text-sm text-muted-foreground mt-1">{course.instructor}</p>
           </div>
           <Badge variant="outline" className={`text-xs border ${getLevelColor(course.level)}`}>
-            {course.level}
+            {course.level === 'Beginner' ? 'Početni' : 
+             course.level === 'Intermediate' ? 'Srednji' : 
+             course.level === 'Advanced' ? 'Napredni' : course.level}
           </Badge>
         </div>
 
@@ -86,7 +88,7 @@ const CourseCard = ({ course, size = 'default' }: CourseCardProps) => {
         {course.progress !== undefined && (
           <div className="space-y-2">
             <div className="flex justify-between text-sm">
-              <span className="text-muted-foreground">Progress</span>
+              <span className="text-muted-foreground">Napredak</span>
               <span className="font-medium">{course.progress}%</span>
             </div>
             <Progress value={course.progress} className="h-2">
