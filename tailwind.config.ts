@@ -19,6 +19,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
+				'satoshi': ['Satoshi', 'sans-serif'],
+				'manrope': ['Manrope', 'sans-serif'],
 				'inter': ['Inter', 'sans-serif'],
 				'poppins': ['Poppins', 'sans-serif'],
 			},
@@ -69,6 +71,7 @@ export default {
 				'glow': 'var(--shadow-glow)',
 				'card': 'var(--shadow-card)',
 				'elevation': 'var(--shadow-elevation)',
+				'elegant': 'var(--shadow-elegant)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
