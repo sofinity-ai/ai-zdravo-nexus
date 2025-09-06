@@ -35,11 +35,22 @@ const CourseCard = ({ course, size = 'default' }: CourseCardProps) => {
     }
   };
 
+  const handleClick = () => {
+    if (course.isLocked) {
+      // Show upgrade modal for locked courses
+      alert("Ovaj kurs je deo Premium paketa. Nadogradi svoju pretplatu da dobiješ pristup.");
+      return;
+    }
+    // Navigate to course page (placeholder for now)
+    console.log("Navigate to course:", course.id);
+  };
+
   return (
     <div 
-      className={`group relative overflow-hidden rounded-xl bg-gradient-card border border-border/50 hover-lift ${
-        course.isLocked ? 'content-locked' : ''
+      className={`group relative overflow-hidden rounded-xl bg-gradient-card border border-border/50 cursor-pointer transition-all duration-300 hover:scale-[1.03] hover:shadow-elegant hover:border-primary/30 ${
+        course.isLocked ? 'opacity-60' : ''
       } ${isLarge ? 'h-80' : 'h-72'}`}
+      onClick={handleClick}
     >
       {/* Thumbnail */}
       <div className={`relative overflow-hidden ${isLarge ? 'h-48' : 'h-40'}`}>
@@ -57,10 +68,22 @@ const CourseCard = ({ course, size = 'default' }: CourseCardProps) => {
           </Button>
         </div>
         
+        {/* Level Tag - positioned at top right of thumbnail */}
+        <div className="absolute top-3 right-3 z-10">
+          <Badge variant="outline" className={`text-xs border ${getLevelColor(course.level)}`}>
+            {course.level === 'Beginner' ? 'Početni' : 
+             course.level === 'Intermediate' ? 'Srednji' : 
+             course.level === 'Advanced' ? 'Napredni' : course.level}
+          </Badge>
+        </div>
+        
         {/* Lock indicator */}
         {course.isLocked && (
-          <div className="absolute top-3 right-3 p-2 rounded-full bg-background/80 backdrop-blur-sm">
-            <Lock className="w-4 h-4 text-muted-foreground" />
+          <div className="absolute inset-0 flex items-center justify-center bg-background/80 backdrop-blur-sm z-20">
+            <div className="text-center">
+              <Lock className="w-8 h-8 text-muted-foreground mx-auto mb-2" />
+              <p className="text-sm text-muted-foreground">Premium kurs</p>
+            </div>
           </div>
         )}
       </div>
@@ -75,13 +98,8 @@ const CourseCard = ({ course, size = 'default' }: CourseCardProps) => {
             }`}>
               {course.title}
             </h3>
-            <p className="text-sm text-muted-foreground mt-1">{course.instructor}</p>
+            <p className="text-sm text-muted-foreground mt-1">autor: {course.instructor}</p>
           </div>
-          <Badge variant="outline" className={`text-xs border ${getLevelColor(course.level)}`}>
-            {course.level === 'Beginner' ? 'Početni' : 
-             course.level === 'Intermediate' ? 'Srednji' : 
-             course.level === 'Advanced' ? 'Napredni' : course.level}
-          </Badge>
         </div>
 
         {/* Progress (if exists) */}
@@ -106,7 +124,7 @@ const CourseCard = ({ course, size = 'default' }: CourseCardProps) => {
             </div>
             <div className="flex items-center space-x-1">
               <Users className="w-3 h-3" />
-              <span>{course.students.toLocaleString()}</span>
+              <span>{course.students.toLocaleString()} polaznika</span>
             </div>
           </div>
           <div className="flex items-center space-x-1">
@@ -114,6 +132,16 @@ const CourseCard = ({ course, size = 'default' }: CourseCardProps) => {
             <span>{course.rating}</span>
           </div>
         </div>
+
+        {/* Progress bar at bottom if course is started */}
+        {course.progress !== undefined && course.progress > 0 && (
+          <div className="absolute bottom-0 left-0 right-0 h-1 bg-muted/20">
+            <div 
+              className="h-full bg-gradient-primary transition-all duration-300"
+              style={{ width: `${course.progress}%` }}
+            />
+          </div>
+        )}
       </div>
     </div>
   );

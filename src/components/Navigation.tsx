@@ -10,26 +10,42 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { Link, useLocation } from "react-router-dom";
 
-const Navigation = () => {
+interface NavigationProps {
+  currentPage?: string;
+}
+
+const Navigation = ({ currentPage }: NavigationProps) => {
+  const location = useLocation();
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between px-4">
         {/* Logo */}
         <div className="flex items-center space-x-6">
-          <div className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <div className="h-8 w-8 rounded-lg bg-gradient-primary flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-sm">AI</span>
             </div>
             <span className="font-poppins font-bold text-xl gradient-text">Zdravo</span>
-          </div>
+          </Link>
 
           {/* Navigation Links */}
           <nav className="hidden md:flex items-center space-x-6">
-            <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
-              <BookOpen className="w-4 h-4 mr-2" />
-              AI Škola
-            </Button>
+            <Link to="/ai-skola">
+              <Button 
+                variant="ghost" 
+                size="sm" 
+                className={`${
+                  location.pathname === '/ai-skola' || currentPage === 'ai-skola'
+                    ? 'text-foreground bg-muted' 
+                    : 'text-muted-foreground hover:text-foreground'
+                }`}
+              >
+                <BookOpen className="w-4 h-4 mr-2" />
+                AI Škola
+              </Button>
+            </Link>
             <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
               <Library className="w-4 h-4 mr-2" />
               Prompt Biblioteka
