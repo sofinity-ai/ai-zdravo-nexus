@@ -7,6 +7,7 @@ interface HeroSlide {
   tagline: string;
   title: string;
   description: string;
+  videoSrc: string;
   primaryButton: {
     text: string;
     action: () => void;
@@ -23,6 +24,7 @@ const heroSlides: HeroSlide[] = [
     tagline: "NOVI KURS",
     title: "Napredni Prompt Inženjering",
     description: "Otključajte tajne 'chain-of-thought' tehnike i kreirajte kompleksne AI procese.",
+    videoSrc: "/hero-video.mp4", // newvideo.mp4
     primaryButton: {
       text: "Počni sa učenjem",
       action: () => console.log("Start learning")
@@ -37,6 +39,7 @@ const heroSlides: HeroSlide[] = [
     tagline: "UŽIVO RADIONICA",
     title: "AI Automatizacija za Biznis",
     description: "Pridružite nam se na ekskluzivnoj radionici i naučite kako da automatizujete poslovne procese uz n8n i AI.",
+    videoSrc: "/hero-video-2.mp4", // claude4.mp4
     primaryButton: {
       text: "Rezerviši Mesto",
       action: () => console.log("Reserve spot")
@@ -51,6 +54,7 @@ const heroSlides: HeroSlide[] = [
     tagline: "IZ ZAJEDNICE",
     title: "Pokaži Svoj Rad: Mesečni Izazov",
     description: "Podelite svoje AI projekte sa zajednicom i osvojite vredne nagrade. Tema ovog meseca: AI Art.",
+    videoSrc: "/hero-video.mp4", // fallback to newvideo.mp4
     primaryButton: {
       text: "Učestvuj u Izazovu",
       action: () => console.log("Join challenge")
@@ -103,6 +107,7 @@ const VideoHero = () => {
       {/* Video Background */}
       <div className="absolute inset-0">
         <video
+          key={slide.videoSrc}
           className="w-full h-full object-cover"
           autoPlay
           muted
@@ -110,7 +115,7 @@ const VideoHero = () => {
           playsInline
           preload="metadata"
         >
-          <source src="/hero-video.mp4" type="video/mp4" />
+          <source src={slide.videoSrc} type="video/mp4" />
         </video>
         
         {/* Fallback animated background (shown if video doesn't load) */}
