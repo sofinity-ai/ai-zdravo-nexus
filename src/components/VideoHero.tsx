@@ -102,8 +102,6 @@ const VideoHero = () => {
     <section className="relative h-screen w-full overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0">
-        {/* Placeholder for video - You'll need to replace src with your video file */}
-        {/* Note: YouTube videos can't be used directly. Please download and convert the video to MP4 format */}
         <video
           className="w-full h-full object-cover"
           autoPlay
@@ -112,9 +110,7 @@ const VideoHero = () => {
           playsInline
           preload="metadata"
         >
-          {/* Replace with your converted video file */}
-          <source src="/placeholder-video.mp4" type="video/mp4" />
-          {/* Fallback gradient background if video fails to load */}
+          <source src="/hero-video.mp4" type="video/mp4" />
         </video>
         
         {/* Fallback animated background (shown if video doesn't load) */}
