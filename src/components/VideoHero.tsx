@@ -100,35 +100,45 @@ const VideoHero = () => {
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-primary-glow/10">
-        {/* Animated elements to simulate video */}
-        <div className="absolute inset-0">
-          {/* Floating particles */}
-          {Array.from({ length: 20 }).map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-1 h-1 bg-primary/30 rounded-full animate-pulse"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 3}s`,
-                animationDuration: `${2 + Math.random() * 3}s`
-              }}
-            />
-          ))}
-          
-          {/* Flowing lines */}
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary to-transparent animate-pulse" />
-            <div className="absolute top-2/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary-glow to-transparent animate-pulse" style={{ animationDelay: '1s' }} />
-            <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent to-transparent animate-pulse" style={{ animationDelay: '2s' }} />
+      {/* Video Background */}
+      <div className="absolute inset-0">
+        {/* Placeholder for video - You'll need to replace src with your video file */}
+        {/* Note: YouTube videos can't be used directly. Please download and convert the video to MP4 format */}
+        <video
+          className="w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+        >
+          {/* Replace with your converted video file */}
+          <source src="/placeholder-video.mp4" type="video/mp4" />
+          {/* Fallback gradient background if video fails to load */}
+        </video>
+        
+        {/* Fallback animated background (shown if video doesn't load) */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-primary-glow/10">
+          <div className="absolute inset-0">
+            {Array.from({ length: 15 }).map((_, i) => (
+              <div
+                key={i}
+                className="absolute w-1 h-1 bg-primary/30 rounded-full animate-pulse"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  animationDelay: `${Math.random() * 3}s`,
+                  animationDuration: `${2 + Math.random() * 3}s`
+                }}
+              />
+            ))}
           </div>
         </div>
       </div>
 
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-background/70 backdrop-blur-sm" />
+      {/* Netflix-style Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/60 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-background/40" />
 
       {/* Content */}
       <div className="relative z-10 h-full flex items-center">
