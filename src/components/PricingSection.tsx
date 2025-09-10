@@ -46,14 +46,14 @@ const PricingSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section className="section-spacing bg-background">
       <div className="container px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-4">
+        <div className="text-center mb-20">
+          <h2 className="brand-bar text-3xl md:text-4xl font-poppins font-bold mb-6 uppercase tracking-wide inline-block">
             Izaberi Plan Koji Ti Odgovara
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-            Sve paketi uključuju 14-dnevni besplatan probni period
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10 font-inter leading-relaxed">
+            Fleksibilni planovi prilagođeni tvojim potrebama i ciljevima
           </p>
           
           {/* Billing Toggle */}
@@ -81,8 +81,8 @@ const PricingSection = () => {
           {plans.map((plan, index) => (
             <Card 
               key={index} 
-              className={`glass-card hover-lift border-border/50 relative ${
-                plan.popular ? 'border-primary/50 shadow-glow' : ''
+              className={`card-premium hover-lift relative ${
+                plan.popular ? 'ring-2 ring-primary shadow-glow' : ''
               }`}
             >
               {plan.popular && (
@@ -91,28 +91,28 @@ const PricingSection = () => {
                 </Badge>
               )}
               
-              <CardHeader className="text-center pb-8">
-                <CardTitle className="text-2xl font-poppins font-bold">
+              <CardHeader className="text-center pb-10">
+                <CardTitle className="text-2xl font-poppins font-bold uppercase tracking-wide">
                   {plan.name}
                 </CardTitle>
-                <p className="text-muted-foreground mb-4">
+                <p className="text-muted-foreground mb-6 font-inter leading-relaxed">
                   {plan.description}
                 </p>
                 
                 <div className="text-center">
-                  <span className="text-4xl font-bold">
+                  <span className="text-4xl font-bold gradient-text">
                     {plan.currency}{isAnnual ? plan.annualPrice : plan.monthlyPrice}
                   </span>
-                  <span className="text-muted-foreground">/mesečno</span>
+                  <span className="text-muted-foreground font-inter">/mesečno</span>
                   {isAnnual && (
-                    <p className="text-sm text-muted-foreground mt-1">
+                    <p className="text-sm text-muted-foreground mt-2 font-inter">
                       Naplaćeno godišnje ({plan.currency}{plan.annualPrice * 12})
                     </p>
                   )}
                 </div>
               </CardHeader>
 
-              <CardContent className="space-y-6">
+              <CardContent className="space-y-8">
                 <Button 
                   className={`w-full ${
                     plan.popular 
@@ -124,11 +124,11 @@ const PricingSection = () => {
                   Započni Besplatan Probni Period
                 </Button>
                 
-                <ul className="space-y-3">
+                <ul className="space-y-4">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start space-x-3">
                       <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-foreground">{feature}</span>
+                      <span className="font-inter">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -137,7 +137,7 @@ const PricingSection = () => {
           ))}
         </div>
         
-        <p className="text-center text-sm text-muted-foreground mt-8">
+        <p className="text-center text-sm text-muted-foreground mt-12 font-inter">
           Svi planovi uključuju 14-dnevni besplatan probni period. Otkažite bilo kada.
         </p>
       </div>

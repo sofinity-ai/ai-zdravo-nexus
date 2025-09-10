@@ -21,13 +21,13 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section className="section-spacing bg-background">
       <div className="container px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-4">
+        <div className="text-center mb-20">
+          <h2 className="brand-bar text-3xl md:text-4xl font-poppins font-bold mb-6 uppercase tracking-wide inline-block">
             Šta Dobijaš?
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-inter leading-relaxed">
             Sve što ti je potrebno za uspeh u AI revoluciji na jednom mestu
           </p>
         </div>
@@ -36,19 +36,19 @@ const FeaturesSection = () => {
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
-              <Card key={index} className="glass-card hover-lift border-border/50">
-                <CardContent className="p-8 text-center">
+              <Card key={index} className="card-premium hover-lift border-white/5">
+                <CardContent className="p-10 text-center">
                   <div className="mb-6 flex justify-center">
                     <div className="w-16 h-16 rounded-2xl bg-gradient-primary flex items-center justify-center">
                       <Icon className="w-8 h-8 text-primary-foreground" />
                     </div>
                   </div>
                   
-                  <h3 className="text-xl font-semibold mb-4 font-poppins">
+                  <h3 className="text-xl font-semibold mb-6 font-poppins uppercase tracking-wide">
                     {feature.title}
                   </h3>
                   
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground font-inter leading-relaxed">
                     {feature.description}
                   </p>
                 </CardContent>

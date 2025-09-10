@@ -18,9 +18,8 @@ const Footer = () => {
               <span className="font-poppins font-bold text-xl gradient-text">Zdravo</span>
             </Link>
             
-            <p className="text-muted-foreground mb-6 max-w-md leading-relaxed">
-              Vodimo AI revoluciju na Balkanu kroz praktično učenje, 
-              ekspertsku zajednicu i alate koji donose realne rezultate.
+            <p className="text-muted-foreground font-inter leading-relaxed max-w-md">
+              Vaš partner za uspeh u AI revoluciji. Praktične veštine, alati i zajednica na jednom mestu.
             </p>
             
             {/* Social Links */}
@@ -39,25 +38,25 @@ const Footer = () => {
 
           {/* Platform */}
           <div>
-            <h4 className="font-semibold mb-4">Platforma</h4>
+            <h4 className="font-semibold mb-6 font-poppins uppercase tracking-wide">Platforma</h4>
             <ul className="space-y-3">
               <li>
-                <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary p-0 h-auto">
+                <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary p-0 h-auto font-inter">
                   Kursevi
                 </Button>
               </li>
               <li>
-                <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary p-0 h-auto">
+                <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary p-0 h-auto font-inter">
                   Prompt Biblioteka
                 </Button>
               </li>
               <li>
-                <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary p-0 h-auto">
+                <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary p-0 h-auto font-inter">
                   Zajednica
                 </Button>
               </li>
               <li>
-                <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary p-0 h-auto">
+                <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary p-0 h-auto font-inter">
                   Cene
                 </Button>
               </li>
@@ -66,25 +65,25 @@ const Footer = () => {
 
           {/* Company */}
           <div>
-            <h4 className="font-semibold mb-4">Kompanija</h4>
+            <h4 className="font-semibold mb-6 font-poppins uppercase tracking-wide">Kompanija</h4>
             <ul className="space-y-3">
               <li>
-                <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary p-0 h-auto">
+                <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary p-0 h-auto font-inter">
                   O Nama
                 </Button>
               </li>
               <li>
-                <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary p-0 h-auto">
+                <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary p-0 h-auto font-inter">
                   Kontakt
                 </Button>
               </li>
               <li>
-                <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary p-0 h-auto">
+                <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary p-0 h-auto font-inter">
                   Karijere
                 </Button>
               </li>
               <li>
-                <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary p-0 h-auto">
+                <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary p-0 h-auto font-inter">
                   Blog
                 </Button>
               </li>
@@ -96,18 +95,18 @@ const Footer = () => {
 
         {/* Bottom Section */}
         <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm text-muted-foreground font-inter">
             © {currentYear} AI Zdravo. Sva prava zadržana.
           </p>
           
           <div className="flex space-x-6">
-            <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary p-0 h-auto text-sm">
+            <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary p-0 h-auto text-sm font-inter">
               Uslovi Korišćenja
             </Button>
-            <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary p-0 h-auto text-sm">
+            <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary p-0 h-auto text-sm font-inter">
               Politika Privatnosti
             </Button>
-            <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary p-0 h-auto text-sm">
+            <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary p-0 h-auto text-sm font-inter">
               Kolačići
             </Button>
           </div>

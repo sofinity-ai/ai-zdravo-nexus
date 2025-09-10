@@ -72,20 +72,34 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-satoshi font-semibold;
-    line-height: 1.3;
-    letter-spacing: 0.01em;
+    @apply font-poppins font-bold;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
   }
 
   h1 {
     @apply font-bold;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  h2, h3 {
+    @apply font-semibold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  /* Body text with generous line height */
+  p {
+    @apply font-inter;
+    line-height: 1.7;
+    font-weight: 400;
   }
 
   /* Tagline and label styles */
   .tagline {
-    font-family: theme('fontFamily.satoshi');
-    font-weight: 500;
+    font-family: theme('fontFamily.poppins');
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.15em;
   }
@@ -101,7 +115,7 @@
   .glass-card {
     background: linear-gradient(145deg, hsl(var(--card) / 0.8), hsl(var(--card) / 0.4));
     backdrop-filter: blur(12px);
-    border: 1px solid hsl(var(--border) / 0.5);
+    border: 1px solid hsl(var(--border) / 0.1);
   }
 
   .glow-effect {
@@ -115,6 +129,33 @@
   .hover-lift:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-elegant);
+  }
+
+  /* Netflix-inspired Brand Bar */
+  .brand-bar {
+    position: relative;
+    padding-left: 1rem;
+  }
+
+  .brand-bar::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+  }
+
+  /* Cinematic spacing utilities */
+  .section-spacing {
+    @apply py-24 md:py-32;
+  }
+
+  .card-premium {
+    @apply p-8 bg-card border border-white/5;
+    background: linear-gradient(145deg, hsl(var(--card)), hsl(230 15% 12%));
   }
 
   /* Progress Bar Styles */

@@ -3,7 +3,7 @@ import { Sparkles, ArrowRight } from "lucide-react";
 
 const FinalCTASection = () => {
   return (
-    <section className="py-24 bg-gradient-to-br from-background via-background to-primary/5 relative overflow-hidden">
+    <section className="section-spacing bg-gradient-to-br from-background via-background to-primary/5 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent opacity-50" />
       <div className="absolute top-10 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
@@ -11,18 +11,17 @@ const FinalCTASection = () => {
       
       <div className="container px-4 relative z-10">
         <div className="text-center max-w-4xl mx-auto">
-          <div className="flex justify-center mb-6">
+          <div className="flex justify-center mb-8">
             <Sparkles className="w-16 h-16 text-primary animate-glow-pulse" />
           </div>
           
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-poppins font-bold mb-6 leading-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-poppins font-bold mb-8 leading-tight uppercase tracking-wide">
             Spremni da Transformišete{" "}
             <span className="gradient-text">Svoju Karijeru</span>?
           </h2>
           
-          <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-            Pridružite se hiljadama profesionalaca koji već koriste AI za 
-            revoluciju svog rada. Počnite danas, besplatno.
+          <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto font-inter leading-relaxed">
+            Počnite svoje AI putovanje već danas. Pristup svim kursevima, alatima i zajednici - potpuno besplatno prvih 14 dana.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -35,7 +34,7 @@ const FinalCTASection = () => {
             </Button>
           </div>
           
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-muted-foreground">
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-muted-foreground font-inter">
             <div className="flex items-center">
               <svg className="w-4 h-4 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />

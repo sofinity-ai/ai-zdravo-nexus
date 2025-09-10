@@ -27,21 +27,21 @@ const InstructorSpotlight = () => {
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section className="section-spacing bg-background">
       <div className="container px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-4">
+        <div className="text-center mb-20">
+          <h2 className="brand-bar text-3xl md:text-4xl font-poppins font-bold mb-6 uppercase tracking-wide inline-block">
             Učite od Dokazanih Stručnjaka
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Naši instruktori su priznati eksperti sa godina iskustva u AI industriji
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-inter leading-relaxed">
+            Naši instruktori su prepoznati eksperti u oblasti AI-ja sa praktičnim iskustvom
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {instructors.map((instructor, index) => (
-            <Card key={index} className="glass-card hover-lift border-border/50">
-              <CardContent className="p-8 text-center">
+            <Card key={index} className="card-premium hover-lift text-center">
+              <CardContent className="p-10">
                 <Avatar className="w-24 h-24 mx-auto mb-6">
                   <AvatarImage src={instructor.avatar} />
                   <AvatarFallback className="bg-gradient-primary text-primary-foreground text-lg">
@@ -49,15 +49,15 @@ const InstructorSpotlight = () => {
                   </AvatarFallback>
                 </Avatar>
                 
-                <h3 className="text-xl font-semibold mb-2 font-poppins">
+                <h3 className="text-xl font-semibold mb-3 font-poppins uppercase tracking-wide">
                   {instructor.name}
                 </h3>
                 
-                <p className="text-primary text-sm font-medium mb-4">
+                <p className="text-primary mb-6 font-poppins font-medium">
                   {instructor.title}
                 </p>
                 
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-muted-foreground font-inter leading-relaxed">
                   {instructor.bio}
                 </p>
               </CardContent>

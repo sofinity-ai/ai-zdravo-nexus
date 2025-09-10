@@ -38,14 +38,14 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-muted/10">
+    <section className="section-spacing bg-muted/10">
       <div className="container px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-4">
+        <div className="text-center mb-20">
+          <h2 className="brand-bar text-3xl md:text-4xl font-poppins font-bold mb-6 uppercase tracking-wide inline-block">
             Često Postavljana Pitanja
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Evo odgovora na najčešća pitanja o AI Zdravo platformi
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-inter leading-relaxed">
+            Odgovori na najčešće postavljana pitanja o AI Zdravo platformi
           </p>
         </div>
 
@@ -57,10 +57,10 @@ const FAQSection = () => {
                 value={`item-${index}`}
                 className="glass-card border-border/50 rounded-lg px-6"
               >
-                <AccordionTrigger className="text-left font-medium text-foreground hover:text-primary">
+                <AccordionTrigger className="text-left text-lg font-semibold hover:text-primary font-poppins uppercase tracking-wide">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed">
+                <AccordionContent className="text-muted-foreground font-inter leading-relaxed pt-6">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

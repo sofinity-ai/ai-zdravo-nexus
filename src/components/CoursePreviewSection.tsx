@@ -10,14 +10,14 @@ const CoursePreviewSection = () => {
   }));
 
   return (
-    <section className="py-24 bg-muted/10">
+    <section className="section-spacing bg-muted/10">
       <div className="container px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-4">
+        <div className="text-center mb-20">
+          <h2 className="brand-bar text-3xl md:text-4xl font-poppins font-bold mb-6 uppercase tracking-wide inline-block">
             Istraži Naše Kurseve
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Praktični kursevi kreirani od strane lokalnih AI eksperata za brže usvajanje znanja
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-inter leading-relaxed">
+            Praktični kursevi kreirani od strane regionalnih AI stručnjaka
           </p>
         </div>
 

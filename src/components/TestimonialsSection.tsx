@@ -28,29 +28,29 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="relative py-24 bg-muted/20 overflow-hidden">
+    <section className="section-spacing bg-muted/20 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent" />
       </div>
       
       <div className="container px-4 relative">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-4">
+        <div className="text-center mb-20">
+          <h2 className="brand-bar text-3xl md:text-4xl font-poppins font-bold mb-6 uppercase tracking-wide inline-block">
             Postani Deo AI Zajednice Balkana
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Čuj šta kažu naši članovi o transformaciji koju su doživeli
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-inter leading-relaxed">
+            Pridruži se hiljadama profesionalaca koji već transformišu svoje karijere
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="glass-card hover-lift border-border/50">
-              <CardContent className="p-8">
-                <Quote className="w-8 h-8 text-primary mb-6" />
+            <Card key={index} className="card-premium h-full">
+              <CardContent className="p-10">
+                <Quote className="w-8 h-8 text-primary mb-8" />
                 
-                <blockquote className="text-foreground mb-6 leading-relaxed">
+                <blockquote className="text-lg font-inter leading-relaxed mb-8 italic">
                   "{testimonial.quote}"
                 </blockquote>
                 
@@ -63,10 +63,10 @@ const TestimonialsSection = () => {
                   </Avatar>
                   
                   <div>
-                    <p className="font-semibold text-foreground">
+                    <p className="font-semibold text-foreground font-poppins uppercase tracking-wide">
                       {testimonial.name}
                     </p>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-muted-foreground font-inter">
                       {testimonial.title}
                     </p>
                   </div>
