@@ -36,7 +36,7 @@ const FeaturesSection = () => {
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
-              <Card key={index} className="card-premium hover-lift border-white/5">
+              <Card key={index} className="glass-card hover-lift">
                 <CardContent className="p-10 text-center">
                   <div className="mb-6 flex justify-center">
                     <div className="w-16 h-16 rounded-2xl bg-gradient-primary flex items-center justify-center">

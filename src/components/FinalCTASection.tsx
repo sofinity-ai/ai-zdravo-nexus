@@ -10,7 +10,7 @@ const FinalCTASection = () => {
       <div className="absolute bottom-10 left-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       
       <div className="container px-4 relative z-10">
-        <div className="text-center max-w-4xl mx-auto">
+        <div className="glass-hero rounded-3xl p-16 text-center max-w-4xl mx-auto">
           <div className="flex justify-center mb-8">
             <Sparkles className="w-16 h-16 text-primary animate-glow-pulse" />
           </div>

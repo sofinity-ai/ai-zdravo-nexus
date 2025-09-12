@@ -21,7 +21,7 @@ const HeroSection = () => {
       
       {/* Content */}
       <div className="container relative z-20 px-4 py-20">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl glass-hero rounded-2xl p-12">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-poppins font-bold mb-8 text-white leading-tight uppercase tracking-wide">
             Postanite Lider u{" "}
             <span className="gradient-text">AI Revoluciji</span>{" "}

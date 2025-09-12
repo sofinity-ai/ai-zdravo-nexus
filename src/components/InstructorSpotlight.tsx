@@ -40,7 +40,7 @@ const InstructorSpotlight = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {instructors.map((instructor, index) => (
-            <Card key={index} className="card-premium hover-lift text-center">
+            <Card key={index} className="glass-card hover-lift text-center">
               <CardContent className="p-10">
                 <Avatar className="w-24 h-24 mx-auto mb-6">
                   <AvatarImage src={instructor.avatar} />

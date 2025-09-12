@@ -81,8 +81,8 @@ const PricingSection = () => {
           {plans.map((plan, index) => (
             <Card 
               key={index} 
-              className={`card-premium hover-lift relative ${
-                plan.popular ? 'ring-2 ring-primary shadow-glow' : ''
+              className={`hover-lift relative ${
+                plan.popular ? 'glass-premium' : 'glass-card'
               }`}
             >
               {plan.popular && (

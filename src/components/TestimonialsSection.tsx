@@ -46,7 +46,7 @@ const TestimonialsSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="card-premium h-full">
+            <Card key={index} className="glass-card h-full">
               <CardContent className="p-10">
                 <Quote className="w-8 h-8 text-primary mb-8" />
                 
